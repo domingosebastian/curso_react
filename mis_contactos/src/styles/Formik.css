@@ -1,0 +1,15 @@
+
+input.error{
+    color: tomato;
+    font-weight: bolder;
+    border: 2px solid tomato;
+}
+
+.input-error{
+    color: tomato;
+    font-size: smaller;
+}
+
+.entry {
+    display: block;
+}
