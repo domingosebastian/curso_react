@@ -5,7 +5,8 @@ import Contact from './Contact';
 // javascript:
 //   {contacts, onContactClick} == { contacts: contacts, onContactClick: onContactClick }
 
-const ContactList = ({contacts, onRemove } ) => {
+const ContactList = ({ contacts, onRemove }) => {
+
     return (
         <div>
             <h1>Lista de villanos</h1>
@@ -35,7 +36,7 @@ ContactList.propTypes = {
             }
         ).isRequired
     ).isRequired,
-    onContactClick: PropTypes.func.isRequired
+    onRemove: PropTypes.func.isRequired
 }
 
 export default ContactList;

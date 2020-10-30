@@ -50,8 +50,8 @@ const Contact = ( {  onClickRemove , contact} ) => {
             {mostra? 
             <Ficha 
                 contact={contact}
-             />
-             : ''}
+            />
+            : ''}
         </li>
     );
 
@@ -61,14 +61,18 @@ const Contact = ( {  onClickRemove , contact} ) => {
 
 // informacion del tipo
 Contact.propTypes = {
-    onClick: PropTypes.func.isRequired,
-    id: PropTypes.number.isRequired,
-    nombre: PropTypes.string.isRequired,
-    email: PropTypes.string,
-    apellidos: PropTypes.string,
-    telefono: PropTypes.string,
-    empresa: PropTypes.string,
-    sector: PropTypes.string
+    onClickRemove: PropTypes.func.isRequired,
+    contact: PropTypes.shape(
+            {
+                id: PropTypes.number.isRequired,
+                nombre: PropTypes.string.isRequired,
+                email: PropTypes.string,
+                apellidos: PropTypes.string,
+                telefono: PropTypes.string,
+                empresa: PropTypes.string,
+                sector: PropTypes.string
+            }
+        ).isRequired
 }
 
 
