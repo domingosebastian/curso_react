@@ -11,7 +11,7 @@ import { removeContact } from '../store/actions/actions.js'
  */
 const mapStateToContacts = (state) => {
     return {
-        contacts: state.contactsState
+        contacts: state.contactsState.contacts
     }
 }
 
