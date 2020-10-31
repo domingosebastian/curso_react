@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { addContact, toggleForm } from '../store/actions/actions';
+import * as actions from '../store/actions/actions';
 
 import NewContactComponent from '../components/NewContactComponent';
 
@@ -12,10 +12,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         submit: (nombre, apellidos, telefono, email, empresa, sector) => {
-            dispatch(addContact(nombre, apellidos, telefono, email, empresa, sector)); 
+            dispatch(actions.addContact(nombre, apellidos, telefono, email, empresa, sector)); 
         },
         toggleForm: () => {
-            dispatch (toggleForm());
+            dispatch (actions.toggleForm());
         }
 
     }

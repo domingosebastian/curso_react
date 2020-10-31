@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import ContactList from '../components/ContactList';
 
-import { removeContact } from '../store/actions/actions.js'
+import * as actions from '../store/actions/actions.js'
 
 /*
  * Un container conecta el componente React (ContactList) al store (state.contactsState)
@@ -24,7 +24,7 @@ const mapStateToContacts = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onRemove: (id) => {
-            dispatch( removeContact(id) );
+            dispatch( actions.removeContact(id) );
         }    
     }
 }
