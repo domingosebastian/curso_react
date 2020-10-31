@@ -47,11 +47,12 @@ const Contact = ( {  onClickRemove , contact} ) => {
             >
             {contact.nombre} {contact.apellidos} 
             &nbsp;<button onClick = { onClickRemove }>Matar</button>
-            {mostra? 
+            {  // uso del renderizado condicional
+                mostra &&
             <Ficha 
                 contact={contact}
             />
-            : ''}
+            }
         </li>
     );
 
