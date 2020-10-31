@@ -27,7 +27,7 @@ let  contacts = [
     
 let initialState = {
     contacts,
-    seq: contacts.length
+    seq: contacts.length +1
 };
 
 
@@ -43,12 +43,7 @@ const misContactosReducer = (state = initialState, action) => {
                     ...contacts,
                     {
                         id: seq++,
-                        nombre: action.payload.nombre,
-                        apellidos: action.payload.apellidos,
-                        email: action.payload.email,
-                        telefono: action.payload.telefono,
-                        empresa: action.payload.empresa,
-                        sector: action.payload.sector
+                        ...action.payload
                     }
                 ],
                 seq
