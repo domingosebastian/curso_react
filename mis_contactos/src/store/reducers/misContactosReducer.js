@@ -6,8 +6,7 @@
  *  - Como se modifica el estado como resulado de las acciones notificadas por los componentes
  */
 
-let initialState = {
-    contacts: [
+let  contacts = [
         {
             id: 1, nombre: 'Al', apellidos: 'Capone', email: 'capo@cosanostra.com', telefono: '546454654',
             empresa: 'Cosa Nostra SL', sector: 'Alimentación'
@@ -24,8 +23,11 @@ let initialState = {
             id: 4, nombre: 'Rocco', apellidos: 'Torrebruno', email: 'torre@bruno.com', telefono: '55545545',
             empresa: 'Circ du Sol', sector: 'Finanzas'
         }
-    ],
-    seq: 5
+];
+    
+let initialState = {
+    contacts,
+    seq: contacts.length
 };
 
 
