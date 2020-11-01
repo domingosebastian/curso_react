@@ -13,9 +13,11 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import PeopleIcon from '@material-ui/icons/People';
 import SettingsIcon from '@material-ui/icons/Settings';
 
+import { useHistory } from 'react-router-dom';
 
-const navegar = () => {
-    console.log('Navegamos a algún lado');
+
+const navegar = (url) => {
+    console.log(`Navegamos a ${url}`);
 }
 
 // Lista de navegación a vistas de la aplicación
@@ -23,28 +25,28 @@ export const mainListItems = (
 
     <div>
         {/* Opción para navegar a la home */}
-        <ListItem button onClick={ navegar }>
+        <ListItem button onClick={ () => navegar('/home') }>
             <ListItemIcon>
                 <HomeIcon />
             </ListItemIcon>
             <ListItemText primary='Home' />
         </ListItem>
         {/* Opción para navegar a Pedidos */}
-        <ListItem button onClick={ navegar }>
+        <ListItem button onClick={  () => navegar('/pedidos') }>
             <ListItemIcon>
                 <ShoppingCartIcon />
             </ListItemIcon>
             <ListItemText primary='Pedidos' />
         </ListItem>
         {/* Opción para navegar a Usuarios */}
-        <ListItem button onClick={ navegar }>
+        <ListItem button onClick={  () => navegar('/usuarios') }>
             <ListItemIcon>
                 <PeopleIcon />
             </ListItemIcon>
             <ListItemText primary='Usarios' />
         </ListItem>
         {/* Opción para navegar a Usuarios */}
-        <ListItem button onClick={ navegar }>
+        <ListItem button onClick={ () => navegar('/informes')  }>
             <ListItemIcon>
                 <BarChartIcon />
             </ListItemIcon>
