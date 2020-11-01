@@ -9,8 +9,9 @@ import { BrowserRouter as Router,
       } from 'react-router-dom';
 
 // Nuestras Vistas para enrutar (Login y Dashboard)
-import Login from './Views/Login';
+import Login from './Views/pages/Login';
 import Dashboard from './Views/Dashboard';
+import SignUp from './Views/pages/SignUp';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
               <Redirect from='/dashboard' to='/login' />
             }
         </Route>
+        <Route exact path='/signup' component={SignUp} />
       </Switch>
     </Router>
   );
