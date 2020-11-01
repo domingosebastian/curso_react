@@ -232,8 +232,8 @@ export default function Dashboard (){
             {/* Contenido del Dashboard */}
             <main className= { classes.content }>
                 {/* Separamos el contenido de la barra de navegación superior */}
-                <div className = { classes.appBarSpacer }>
-                    <Container className={ classes.container } maxWidth= 'lg'>
+                <div className = { classes.appBarSpacer } />
+                <Container className={classes.container} maxWidth='lg'>
                         {/* Aquí van nuestros componentes */}
                         <Grid container spacing= { 3 }>
                             <Grid item xs= { 12 } md= { 8 } lg= { 9 }>
@@ -256,7 +256,6 @@ export default function Dashboard (){
                             </Grid>
                         </Grid>
                     </Container>
-                </div>
             </main>
         </div>
     )
