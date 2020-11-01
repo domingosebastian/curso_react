@@ -4,6 +4,12 @@ import ContactList from '../components/ContactList';
 
 import * as actions from '../store/actions/actions.js'
 
+const filterContacts = (contacts, search) => {
+    return contacts.filter(
+        (contact) => contact.nombre.includes(search)
+    )
+}
+
 /*
  * Un container conecta el componente React (ContactList) al store (state.contactsState)
  *
@@ -11,7 +17,7 @@ import * as actions from '../store/actions/actions.js'
  */
 const mapStateToContacts = (state) => {
     return {
-        contacts: state.contactsState.contacts
+        contacts: filterContacts(state.contactsState.contacts, state.filterState)
     }
 }
 

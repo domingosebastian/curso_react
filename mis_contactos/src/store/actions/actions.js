@@ -35,3 +35,13 @@ export const toggleForm = () => {
         payload: {}
     }
 }
+
+
+export const filter = (search) => {
+    return {
+        type: 'SET_FILTER',
+        payload: {
+            search
+        }
+    }
+}
